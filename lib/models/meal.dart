@@ -1,9 +1,9 @@
 class Meal {
-  final String id, title, imageURL, price, time, description, category;
+  final String id, mealName, imageURL, price, time, description, category;
 
   const Meal(
       {required this.id,
-      required this.title,
+      required this.mealName,
       required this.imageURL,
       required this.price,
       required this.time,

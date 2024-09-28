@@ -29,20 +29,23 @@ class HomeScreen extends StatelessWidget {
         backgroundColor: Colors.amber,
       ),
       body: SafeArea(
-          child: GridView.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 2,
-                  crossAxisSpacing: 0,
-                  childAspectRatio: 1,
-                  mainAxisSpacing: 0),
-              itemCount: categories.length,
-              itemBuilder: (context, index) {
-                return CategoryItem(
-                  id: categories[index].id,
-                  name: categories[index].name,
-                  image: categories[index].image,
-                );
-              })),
+          child: Padding(
+        padding: const EdgeInsets.all(5.0),
+        child: GridView.builder(
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                crossAxisCount: 2,
+                crossAxisSpacing: 5,
+                childAspectRatio: 1,
+                mainAxisSpacing: 5),
+            itemCount: categories.length,
+            itemBuilder: (context, index) {
+              return CategoryItem(
+                id: categories[index].id,
+                name: categories[index].name,
+                image: categories[index].image,
+              );
+            }),
+      )),
     );
   }
 }

@@ -15,7 +15,7 @@ const List<Categories> categories = [
 const meals = [
   Meal(
       id: "m1",
-      title: "Lamp Chops",
+      mealName: "Lamp Chops",
       imageURL: "assets/images/lampchops.jpg",
       price: "150",
       time: "35",
@@ -24,7 +24,7 @@ const meals = [
       category: "c3"),
   Meal(
       id: "m2",
-      title: "Butter Chicken",
+      mealName: "Butter Chicken",
       imageURL: "assets/images/butterchicken.jpg",
       price: "90",
       time: "25",
@@ -32,7 +32,7 @@ const meals = [
       category: "c2"),
   Meal(
       id: "m3",
-      title: "Alfredo",
+      mealName: "Alfredo",
       imageURL: "assets/images/alfredo.jpg",
       price: "60",
       time: "25",
@@ -40,7 +40,7 @@ const meals = [
       category: "c4"),
   Meal(
       id: "m4",
-      title: "Steak",
+      mealName: "Steak",
       imageURL: "assets/images/steak.jpg",
       price: "150",
       time: "30",
@@ -48,7 +48,7 @@ const meals = [
       category: "c3"),
   Meal(
       id: "m5",
-      title: "Smoked Cheesy ",
+      mealName: "Smoked Cheesy ",
       imageURL: "assets/images/smoked_cheesy.jpg",
       price: "90",
       time: "25",
@@ -56,7 +56,7 @@ const meals = [
       category: "c7"),
   Meal(
       id: "m6",
-      title: "Lamp Biryani",
+      mealName: "Lamp Biryani",
       imageURL: "assets/images/lamp_biryani.jpg",
       price: "90",
       time: "30",
@@ -64,7 +64,7 @@ const meals = [
       category: "c2"),
   Meal(
       id: "m7",
-      title: "Shish Tawook Rice",
+      mealName: "Shish Tawook Rice",
       imageURL: "assets/images/shish_Tawook.jpg",
       price: "99",
       time: "30",
@@ -72,7 +72,7 @@ const meals = [
       category: "c7"),
   Meal(
       id: "m8",
-      title: "Lamp Shank",
+      mealName: "Lamp Shank",
       imageURL: "assets/images/lamp_shank.jpg",
       price: "130",
       time: "35",

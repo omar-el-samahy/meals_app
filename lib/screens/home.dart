@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:meals_app/data.dart';
+import 'package:meals_app/widgets_builder/categories.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -14,10 +16,33 @@ class HomeScreen extends StatelessWidget {
             fontSize: 24,
             fontFamily: 'Arial',
             color: Colors.white,
+            shadows: [
+              Shadow(
+                offset: Offset(1.0, 2.0),
+                blurRadius: 5.0,
+                color: Colors.black54,
+              ),
+            ],
           ),
         ),
+        centerTitle: true,
         backgroundColor: Colors.amber,
       ),
+      body: SafeArea(
+          child: GridView.builder(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 0,
+                  childAspectRatio: 1,
+                  mainAxisSpacing: 0),
+              itemCount: categories.length,
+              itemBuilder: (context, index) {
+                return CategoryItem(
+                  id: categories[index].id,
+                  name: categories[index].name,
+                  image: categories[index].image,
+                );
+              })),
     );
   }
 }

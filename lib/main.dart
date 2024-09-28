@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:meals_app/screens/home.dart';
 
-main() => runApp(MealsApp());
+main() => runApp(const MealsApp());
 
 class MealsApp extends StatelessWidget {
   const MealsApp({super.key});
@@ -9,7 +9,8 @@ class MealsApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: HomeScreen(),
+      theme: ThemeData(scaffoldBackgroundColor: const Color(0xFFC7E0F4)),
+      home: const HomeScreen(),
     );
   }
 }

@@ -1,19 +1,27 @@
 import 'package:flutter/material.dart';
-import 'package:meals_app/widgets_builder/solo_meal_widget.dart';
 
+import '../data.dart';
+import '../widgets_builder/solo_meal_widget.dart';
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    var title =
-        ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+    var title = ModalRoute.of(context)!.settings.arguments as Map<String, dynamic>;
+
+
     String name = title["name"];
+    String id = title["id"];
+
+
+    final meal = meals.firstWhere((meal) => meal.id.toString() == id);
+
+
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "${title["name"]}",
-          style: TextStyle(
+          name,
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 24,
             fontFamily: 'Arial',
@@ -30,7 +38,14 @@ class DetailsScreen extends StatelessWidget {
         centerTitle: true,
         backgroundColor: Colors.amber,
       ),
-      body: const SafeArea(child: MealDescription()),
+      body: SafeArea(
+        child: MealDescription(
+          description: meal.description,
+          price: meal.price,
+          image: meal.imageURL,
+          id: meal.id, title: meal.mealName,
+        ),
+      ),
     );
   }
 }

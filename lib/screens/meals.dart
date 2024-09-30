@@ -38,16 +38,16 @@ class MealsScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (context, index) {
           return CategoryMeals(
-            id: meals[index].id,
-            name: meals[index].mealName,
-            image: meals[index].imageURL,
-            category: meals[index].category,
-            description: meals[index].description,
-            price: meals[index].price,
-            time: meals[index].price,
+            id: mealsFiltered[index].id,
+            name: mealsFiltered[index].mealName,
+            image: mealsFiltered[index].imageURL,
+            category: mealsFiltered[index].category,
+            description: mealsFiltered[index].description,
+            price: mealsFiltered[index].price,
+            time: mealsFiltered[index].time,
           );
         },
-        itemCount: meals.length,
+        itemCount: mealsFiltered.length,
       ),
     );
   }
